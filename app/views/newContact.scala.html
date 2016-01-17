@@ -1,0 +1,27 @@
+@(contactForm: Form[Contact])
+
+@import helper._
+
+@main("New contact") {
+    @form(routes.Web.createContact()) {
+        @inputText(contactForm("name"))
+        @inputText(contactForm("phone"))
+        @inputText(contactForm("email"))
+        <input type="submit" value="Submit"/>
+
+    }
+    <br>
+    <a href="@routes.Web.newContact()"> Reset </a>
+    <br>
+    <a href="@routes.Web.show(1)">Show id 1</a>
+    <br>
+    <a href="@routes.Web.show(2)">Show id 2</a>
+    <br>
+    <a href="@routes.Web.show(3)">Show id 3</a>
+    <br>
+    <a href="@routes.Web.show(4)">Show id 4</a>
+    <br>
+    <a href="@routes.Web.show(5)">Show id 5</a>
+    <br>
+    <a href="@routes.Web.show(6)">Show id 6</a>
+}
